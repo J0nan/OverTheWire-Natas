@@ -2,105 +2,177 @@
 
 # Table of Content <!-- omit in toc -->
 - [Natas levels](#natas-levels)
-  - [0](#0)
-  - [1](#1)
-  - [2](#2)
-  - [3](#3)
-  - [4](#4)
-  - [5](#5)
-  - [6](#6)
-  - [7](#7)
-  - [8](#8)
-  - [9](#9)
-  - [10](#10)
-  - [11](#11)
-  - [12](#12)
-  - [14](#14)
-  - [15](#15)
-  - [16](#16)
-  - [17](#17)
-  - [18](#18)
-  - [19](#19)
-  - [20](#20)
-  - [21](#21)
-  - [22](#22)
-  - [23](#23)
-  - [24](#24)
-  - [25](#25)
-  - [26](#26)
-  - [27](#27)
-  - [28](#28)
-  - [29](#29)
-  - [30](#30)
-  - [31](#31)
-  - [32](#32)
-  - [33](#33)
+  - [Level 0](#level-0)
+    - [Access](#access)
+    - [Password](#password)
+  - [Level 1](#level-1)
+    - [Access](#access-1)
+    - [Password](#password-1)
+  - [Level 2](#level-2)
+    - [Access](#access-2)
+    - [Password](#password-2)
+  - [Level 3](#level-3)
+    - [Access](#access-3)
+    - [Password](#password-3)
+  - [Level 4](#level-4)
+  - [Level 5](#level-5)
+  - [Level 6](#level-6)
+  - [Level 7](#level-7)
+  - [Level 8](#level-8)
+  - [Level 9](#level-9)
+  - [Level 10](#level-10)
+  - [Level 11](#level-11)
+  - [Level 12](#level-12)
+  - [Level 14](#level-14)
+  - [Level 15](#level-15)
+  - [Level 16](#level-16)
+  - [Level 17](#level-17)
+  - [Level 18](#level-18)
+  - [Level 19](#level-19)
+  - [Level 20](#level-20)
+  - [Level 21](#level-21)
+  - [Level 22](#level-22)
+  - [Level 23](#level-23)
+  - [Level 24](#level-24)
+  - [Level 25](#level-25)
+  - [Level 26](#level-26)
+  - [Level 27](#level-27)
+  - [Level 28](#level-28)
+  - [Level 29](#level-29)
+  - [Level 30](#level-30)
+  - [Level 31](#level-31)
+  - [Level 32](#level-32)
+  - [Level 33](#level-33)
 
 
 # Natas levels
 
-## 0
+Here I will put the access username and password for each level, and what I did and why to find the password for the next level.
 
-## 1
+https://overthewire.org/wargames/natas/
 
-## 2
+## Level 0
 
-## 3
+### Access
 
-## 4
+http://natas0.natas.labs.overthewire.org/
 
-## 5
+username: natas0
 
-## 6
+password: natas0
 
-## 7
+### Password
+Viewing the source code of the web (Ctrl + U), we can find the password for the next level.
+```
+g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
+```
 
-## 8
+## Level 1
 
-## 9
+### Access
 
-## 10
+http://natas1.natas.labs.overthewire.org/
 
-## 11
+username: natas1
 
-## 12
+password: g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
 
-## 14
+### Password
+Viewing the source code of the web (Ctrl + U), we can find the password for the next level.
+```
+h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
+```
 
-## 15
+## Level 2
 
-## 16
+### Access
 
-## 17
+http://natas2.natas.labs.overthewire.org/
 
-## 18
+username: natas2
 
-## 19
+password: h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
 
-## 20
+### Password
+Viewing the source code of the web (Ctrl + U), we find an image located in `files/pixel.png`. As you can see, the server is serving an image on the folder `files` so we can try removing the `pixel.png` from the url (http://natas2.natas.labs.overthewire.org/files). There we can see the files on the folder. If we open the file named `users.txt` we find some users and their password, there we have the password for natas3.
 
-## 21
+```
+G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+```
 
-## 22
+## Level 3
 
-## 23
+### Access
 
-## 24
+http://natas3.natas.labs.overthewire.org/
 
-## 25
+username: natas2
 
-## 26
+password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
 
-## 27
+### Password
+Viewing the source code of the web (Ctrl + U), we see they left us a clue, as we can see a comment that says: `<!-- No more information leaks!! Not even Google will find it this time... -->`. This is telling us to look at the `robots.txt` file of the web. This files is used by search engine crawlers, mainly to avoid overloading your site with requests and indicate whether certain user agents (web-crawling software) can or cannot crawl parts of a website.
 
-## 28
+Accessing http://natas3.natas.labs.overthewire.org/robots.txt we can see that there is a path disallow for every User-Agent, `/s3cr3t/`. With these we access http://natas3.natas.labs.overthewire.org/s3cr3t/. There as on the prior level, we find a file called `users.txt`, if we open it we find the password for natas4.
 
-## 29
+```
+tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+```
 
-## 30
+## Level 4
 
-## 31
+## Level 5
 
-## 32
+## Level 6
 
-## 33
+## Level 7
+
+## Level 8
+
+## Level 9
+
+## Level 10
+
+## Level 11
+
+## Level 12
+
+## Level 14
+
+## Level 15
+
+## Level 16
+
+## Level 17
+
+## Level 18
+
+## Level 19
+
+## Level 20
+
+## Level 21
+
+## Level 22
+
+## Level 23
+
+## Level 24
+
+## Level 25
+
+## Level 26
+
+## Level 27
+
+## Level 28
+
+## Level 29
+
+## Level 30
+
+## Level 31
+
+## Level 32
+
+## Level 33
