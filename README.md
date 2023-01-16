@@ -15,6 +15,8 @@
     - [Access](#access-3)
     - [Password](#password-3)
   - [Level 4](#level-4)
+    - [Access](#access-4)
+    - [Password](#password-4)
   - [Level 5](#level-5)
   - [Level 6](#level-6)
   - [Level 7](#level-7)
@@ -106,7 +108,7 @@ G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
 
 http://natas3.natas.labs.overthewire.org/
 
-username: natas2
+username: natas3
 
 password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
 
@@ -120,6 +122,16 @@ tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
 ```
 
 ## Level 4
+
+### Access
+
+http://natas4.natas.labs.overthewire.org/
+
+username: natas4
+
+password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
+### Password
 
 ## Level 5
 
