@@ -18,6 +18,8 @@
     - [Access](#access-4)
     - [Password](#password-4)
   - [Level 5](#level-5)
+    - [Access](#access-5)
+    - [Password](#password-5)
   - [Level 6](#level-6)
   - [Level 7](#level-7)
   - [Level 8](#level-8)
@@ -129,11 +131,28 @@ http://natas4.natas.labs.overthewire.org/
 
 username: natas4
 
-password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+password: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
 
 ### Password
+For this challenge I used [Burp]([https://](https://portswigger.net/burp/communitydownload)) to capture and modify the petitions sent, and modify them before they are sent. We need to do this, because the web page is telling us that we can only access from `http://natas5.natas.labs.overthewire.org/`.
+
+If we capture the traffic in Burp when we refresh the page, we can see a field which is: `Referer: http://natas4.natas.labs.overthewire.org/index.php`. In order to access the password, we need to change it to: `Referer: http://natas5.natas.labs.overthewire.org/index.php` and then the page will load showing us the password.
+
+```
+Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+```
 
 ## Level 5
+
+### Access
+
+http://natas5.natas.labs.overthewire.org/
+
+username: natas5
+
+password: Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+### Password
 
 ## Level 6
 
