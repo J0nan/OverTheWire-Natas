@@ -21,6 +21,8 @@
     - [Access](#access-5)
     - [Password](#password-5)
   - [Level 6](#level-6)
+    - [Access](#access-6)
+    - [Password](#password-6)
   - [Level 7](#level-7)
   - [Level 8](#level-8)
   - [Level 9](#level-9)
@@ -154,7 +156,29 @@ password: Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
 
 ### Password
 
+For this challenge we see the web page is telling us that we are not logged in, this is telling us that the web page is looking at something to check whether we are logged in or not. With this information I decided to look at the cookies. There I can see that there is a cookie named `loggedin` with a value of `0`. I change the value to `1` and then refresh the page. Then the page is showing us the password for natas6.
+
+```
+fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+```
+
 ## Level 6
+
+### Access
+
+http://natas6.natas.labs.overthewire.org/
+
+username: natas6
+
+password: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+### Password
+
+If we look at the source code of the web, we can see that the web is including a file named `includes/secret.inc` with this we can try accessing the file accessing the url http://natas6.natas.labs.overthewire.org/includes/secret.inc there we can find the secret for natas7.
+
+```
+FOEIUWGHFEEUHOFUOIU
+```
 
 ## Level 7
 
