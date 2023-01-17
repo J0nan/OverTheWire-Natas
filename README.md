@@ -27,6 +27,8 @@
     - [Access](#access-7)
     - [Password](#password-7)
   - [Level 8](#level-8)
+    - [Access](#access-8)
+    - [Password](#password-8)
   - [Level 9](#level-9)
   - [Level 10](#level-10)
   - [Level 11](#level-11)
@@ -194,7 +196,23 @@ password: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
 
 ### Password
 
+Accessing the page, we can see two buttons, if we click either of them it is redirecting us to the same page, but an url parameter (`?page=home`). If we remove home leaving the complete url: http://natas7.natas.labs.overthewire.org/index.php?page= After loading, we can see the web is giving an error, because the file name can not be empty. This is telling us that the page parameter is the file name the server is opening, so following the comment found on the source code of the web, we put the page parameter to `/etc/natas_webpass/natas8`, being the complete url: http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8. After the web loads, the password for natas8 is showed.
+
+```
+a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+```
+
 ## Level 8
+
+### Access
+
+http://natas8.natas.labs.overthewire.org/
+
+username: natas8
+
+password: a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+### Password
 
 ## Level 9
 
