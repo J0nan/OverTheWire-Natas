@@ -24,6 +24,8 @@
     - [Access](#access-6)
     - [Password](#password-6)
   - [Level 7](#level-7)
+    - [Access](#access-7)
+    - [Password](#password-7)
   - [Level 8](#level-8)
   - [Level 9](#level-9)
   - [Level 10](#level-10)
@@ -174,13 +176,23 @@ password: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
 
 ### Password
 
-If we look at the source code of the web, we can see that the web is including a file named `includes/secret.inc` with this we can try accessing the file accessing the url http://natas6.natas.labs.overthewire.org/includes/secret.inc there we can find the secret for natas7.
+If we look at the source code of the web, we can see that the web is including a file named `includes/secret.inc` with this we can try accessing the file accessing the url http://natas6.natas.labs.overthewire.org/includes/secret.inc there we can find the secret. With that secret, we put it in the input box and after submitting we are given the password for natas7.
 
 ```
-FOEIUWGHFEEUHOFUOIU
+jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
 ```
 
 ## Level 7
+
+### Access
+
+http://natas7.natas.labs.overthewire.org/
+
+username: natas7
+
+password: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+### Password
 
 ## Level 8
 
