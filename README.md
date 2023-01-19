@@ -30,6 +30,8 @@
     - [Access](#access-8)
     - [Password](#password-8)
   - [Level 9](#level-9)
+    - [Access](#access-9)
+    - [Password](#password-9)
   - [Level 10](#level-10)
   - [Level 11](#level-11)
   - [Level 12](#level-12)
@@ -214,7 +216,25 @@ password: a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
 
 ### Password
 
+For this challenge, we have to look at the source code, where we can see that the input send by the user, it is being transform by the function `encodeSecret` and compare with the variable named: `encodedSecret` which has a value of `3d3d516343746d4d6d6c315669563362`. So basically we need to undo the transformations in reverse order to the encoded Secret. 
+
+In order, we will have to decode from hexadecimal, reverse the order of the string, and decode the base64. For doing this I will use CyberChef. On this [URL](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Reverse('Character')From_Base64('A-Za-z0-9%2B/%3D',true,false)&input=M2QzZDUxNjM0Mzc0NmQ0ZDZkNmMzMTU2Njk1NjMzNjI) you can see the steps and the output: `oubWYf2kBq`. With this, we put it on the input box and after submitting, we get the password for natas9.
+
+```
+Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+```
+
 ## Level 9
+
+### Access
+
+http://natas9.natas.labs.overthewire.org/
+
+username: natas9
+
+password: Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+
+### Password
 
 ## Level 10
 
