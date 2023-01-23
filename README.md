@@ -33,6 +33,8 @@
     - [Access](#access-9)
     - [Password](#password-9)
   - [Level 10](#level-10)
+    - [Access](#access-10)
+    - [Password](#password-10)
   - [Level 11](#level-11)
   - [Level 12](#level-12)
   - [Level 14](#level-14)
@@ -236,7 +238,23 @@ password: Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
 
 ### Password
 
+For this challenge we take a look at the source code to see what is going on. There we can see that the page is making a grep of the text entered in the textbox, which is passed to the server as a url parameter. Seeing that there are not sanitizing the text introduced, we can try making a grep of the file we want to read, where the password for natas10 is. With all of these, we introduce on the text field the following text: `-m 1 -e . /etc/natas_webpass/natas10` or we can go to the following url: [http://natas9.natas.labs.overthewire.org/index.php?needle=-m 1 -e . /etc/natas_webpass/natas10](http://natas9.natas.labs.overthewire.org/index.php?needle=-m%201%20-e%20.%20/etc/natas_webpass/natas10). I have put the `-m 1` in order to only show the first line of each file, the `-e .` is using regex for finding in the file, the regex of `.` is any character, the last part, is the file where we want to look. After loading the web page, we can see the first line of the files `dictionary.txt` and `natas10`. On this last one we are showed the password for natas10.
+
+```
+D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+```
+
 ## Level 10
+
+### Access
+
+http://natas10.natas.labs.overthewire.org/
+
+username: natas10
+
+password: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+### Password
 
 ## Level 11
 
