@@ -36,6 +36,8 @@
     - [Access](#access-10)
     - [Password](#password-10)
   - [Level 11](#level-11)
+    - [Access](#access-11)
+    - [Password](#password-11)
   - [Level 12](#level-12)
   - [Level 14](#level-14)
   - [Level 15](#level-15)
@@ -256,7 +258,23 @@ password: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
 
 ### Password
 
+This challenge is a variation of the previews one, it adds a filter of some characters. It is looking for any of the following characters: `;|& `. Due to the way I made natas9, i did not used any of those characters. These means I can use the same input, modified to look for the password of natas11 with: `-m 1 -e . /etc/natas_webpass/natas11`. After putting it on the input box we obtain the password for natas11.
+
+```
+1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+```
+
 ## Level 11
+
+### Access
+
+http://natas11.natas.labs.overthewire.org/
+
+username: natas11
+
+password: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+### Password
 
 ## Level 12
 
