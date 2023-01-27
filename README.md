@@ -39,6 +39,8 @@
     - [Access](#access-11)
     - [Password](#password-11)
   - [Level 12](#level-12)
+    - [Access](#access-12)
+    - [Password](#password-12)
   - [Level 14](#level-14)
   - [Level 15](#level-15)
   - [Level 16](#level-16)
@@ -276,7 +278,32 @@ password: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
 
 ### Password
 
+In this challenge, we see on the code we have to modify the cookie in order to have the page show us the password. But the cookie has been scrambled with an xor and the codified in base64 and the key used in the xor, has been redacted, so we need to get it.
+
+With all the information on the code, and with the value of the cookie, we have an input and output, so we can get the key of the xor.
+- Input: `{"showpassword":"no","bgcolor":"#ffffff"}`
+- Output: `MGw7JCQ5OC04PT8jOSpqdmkgJ25nbCorKCEkIzlscm5oKC4qLSgubjY=`
+- Output decoded from Base64: `0l;$$98-8=?#9*jvi 'ngl*+(!$#9lrnh(.*-(.n6`
+
+In order to get the key, we just need to make an xor of the *Input* and *Output decoded from Base64*. For this we cas use an online tool such us [this](https://xor.pw/#). We have to make sure the input type is set to ASCII. The output is the key used on the xor: `KNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLK`. We can check this by decoding the cookie, [here you can take a look](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',false,false)XOR(%7B'option':'UTF8','string':'KNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLK'%7D,'Standard',false)&input=TUd3N0pDUTVPQzA0UFQ4ak9TcHFkbWtnSjI1bmJDb3JLQ0VrSXpsc2NtNW9LQzRxTFNndWJqWT0). After checking the passwords works, we can see that the secret used by the web is `KNHL`.
+
+Now having the key, we can modify the cookie from: `{"showpassword":"no","bgcolor":"#ffffff"}` to `{"showpassword":"yes","bgcolor":"#ffffff"}`, then codify it [here](https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'Latin1','string':'KNHL'%7D,'Standard',false)To_Base64('A-Za-z0-9%2B/%3D')&input=eyJzaG93cGFzc3dvcmQiOiJ5ZXMiLCJiZ2NvbG9yIjoiI2ZmZmZmZiJ9) and then change it on our browser setting its value to `MGw7JCQ5OC04PT8jOSpqdmk3LT9pYmouLC0nICQ8anZpbS4qLSguKmkz`. At last, we update the page and we get the password for natas12.
+
+```
+YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
+```
+
 ## Level 12
+
+### Access
+
+http://natas12.natas.labs.overthewire.org/
+
+username: natas12
+
+password: YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
+
+### Password
 
 ## Level 14
 
